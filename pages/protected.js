@@ -38,6 +38,10 @@ export default function Protected() {
           <p className="description">
             Wow, secrets are super cool. Welcome {user?.user_metadata.full_name}!
           </p>
+          <span>
+            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-4823a8b4-bb7c-4c8c-8a27-0f29b6282de8"></div>
+          </span>
           <button
             onClick={() => {
               netlifyAuth.signout(() => {
