@@ -6,6 +6,7 @@ import netlifyAuth from '../netlifyAuth.js'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import Calendar from '@components/Calendar'
 
 export default function Home() {
   let [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated)
