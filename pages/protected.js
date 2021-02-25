@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import Calendar from '@components/Calendar'
 
 import netlifyAuth from '../netlifyAuth.js'
 
@@ -34,10 +35,8 @@ export default function Protected() {
 
       {loggedIn ? (
         <main>
-          <Header text={'Welcome to the Private Space™'} />
-          <p className="description">
-            Wow, secrets are super cool. Welcome {user?.user_metadata.full_name}!
-          </p>
+          <Header text={'Custer Fire Protection Disctrict Schedule'} />
+          <Calendar />          
           <button
             onClick={() => {
               netlifyAuth.signout(() => {
@@ -47,8 +46,9 @@ export default function Protected() {
             }}
           >
             Log out.
-          </button>
+          </button>  
         </main>
+        
       ) : (
         <main>
           <p>YOU ARE NOT ALLOWED HERE.</p>
@@ -62,7 +62,7 @@ export default function Protected() {
 
       <style jsx>{`
         .container {
-          height: 100vh;
+          height: 10vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
